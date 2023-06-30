@@ -1,0 +1,172 @@
+@import '../../styles/contants.scss';
+
+
+
+
+
+.products {
+  background-color: rgb(232,236,244)
+
+
+}
+
+
+ .sectionTitle h1::before {
+  left: 20%;
+  right: 20%;
+}
+
+ .sectionTitle .small {
+  color: red;
+  padding-bottom: 35px;
+}
+
+ .filter-buttons {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+ .filter-buttons ul {
+  list-style: none;
+  text-align: center;
+  padding: 15px 40px;
+}
+
+ .filter-buttons ul li {
+  color: #d5d5d5;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  padding-bottom: 0px;
+}
+
+ .filter-buttons ul li.active {
+  color: #febd01;
+  border-bottom: 2px solid #febd01;
+}
+
+ .filter-buttons {
+  margin-bottom: 15px;
+}
+
+ .portfolioGallery {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ .portfolioGallery .item {
+  justify-items: flex-end;
+  text-align: end;
+
+
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+}
+
+.portfolioGallery .item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 0%;
+  background-color: rgba(220, 53, 56, 0.8);
+}
+
+.portfolioGallery .item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 0%;
+  background-color: rgba(220, 53, 56, 0.8);
+}
+
+.portfolioGallery .item img {
+  width: 100%;
+  // height: 270px;
+  background-position: center;
+}
+
+.portfolioGallery .portfolioText {
+  font-size: 1.3rem;
+  position: absolute;
+  transition: all .3s linear;
+  top: 70%;
+  z-index: 5;
+  left: -9000px;
+  transform: translateY(-50%);
+  text-align: start;
+
+}
+
+@keyframes aniname-top {
+  from {
+      left: 100%;
+  }
+  to {
+      left: 0px;
+  }
+}
+
+@keyframes aniname-bot {
+  from {
+      right: 100%;
+  }
+  to {
+      right: 0px;
+  }
+}
+
+.portfolioGallery .item:hover:before {
+  width: 100%;
+  animation: aniname-top 0.4s;
+}
+
+.portfolioGallery .item:hover:after {
+  width: 100%;
+  animation: aniname-bot 0.4s;
+}
+
+.portfolioGallery .overlay {
+  display: grid;
+  position: absolute;
+  top: -400px;
+  z-index: 5;
+  transition: all .3s linear;
+  right: 20px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #070707;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+   
+    line-height: 40px;
+  }
+}
+
+
+
+.portfolioGallery .item:hover>.overlay {
+  top: 0;
+}
+
+.portfolioGallery .item:hover>.portfolioText {
+  left: 20px;
+}
