@@ -1,5 +1,5 @@
 import React from "react";
-import { projectExperience, WhatDoIHelp } from "../../utils/data";
+
 import css from "./Products.module.scss";
 import { motion } from "framer-motion";
 import {
@@ -9,7 +9,7 @@ import {
   footerVariants,
   zoomIn,
 } from "../../utils/motion.js";
-import { BiLogoFacebookCircle } from "react-icons/bi";
+
 import { AiFillEye, AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import Tippy from "@tippyjs/react";
 import { ProductList } from "../../utils/data";
@@ -30,19 +30,16 @@ const Products = () => {
         </h1>
       </div>
 
-      <div class="row">
-        <div class={`${css.serviceContent}  ${css.fadeInDown}`}>
+      <div className="row">
+        <div className={`${css.serviceContent}  ${css.fadeInDown}`}>
           <motion.div
-          variants={fadeIn("up", "tween", .5, .6)}
-            class={`grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  items-center  gap-4 ${css.portfolioGallery}  fadeInUp`}
+            variants={fadeIn("up", "tween", 0.5, 0.6)}
+            className={`grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  items-center  gap-4 ${css.portfolioGallery}  fadeInUp`}
           >
             {ProductList.map((product, index) => (
-              <div class={css.item}>
-                <img
-                  src={product.image}
-                  alt="portfolio "
-                />
-                <div class={css.overlay}>
+              <motion.div variants={fadeIn("up", "tween", .5, index * 0.5)} key={index} className={css.item}>
+                <img src={product.image} alt="portfolio " />
+                <div className={css.overlay}>
                   <Tippy content="Liên kết">
                     <a
                       href={product.link}
@@ -62,14 +59,13 @@ const Products = () => {
                     </a>
                   </Tippy>
                 </div>
-                <div class={css.portfolioText}>
-
-                  <h4 className="text-white text-lg font-bold">{product.name}</h4>
-                  <h5 className="text-white text-sm ">
-                  {product.info}
-                  </h5>
+                <div className={css.portfolioText}>
+                  <h4 className="text-white text-lg font-bold">
+                    {product.name}
+                  </h4>
+                  <h5 className="text-white text-sm ">{product.info}</h5>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import css from "./Header.module.scss";
-import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
+import {  BiMenu } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+
 import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
-import useHeaderShadow from "../../hooks/useHeaderShadow";
 
 
 const Header = () => {
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);
-  const headerShadow = useHeaderShadow();
-  console.log(headerShadow);
+
   //to handle click outside of sidebar on mobile
   useOutsideAlerter({
     menuRef,
@@ -53,10 +53,12 @@ const Header = () => {
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
+         
           <li
             className={activeMenuItem === "experties" ? css.activeMenuItem : ""}
             onClick={() => setActiveMenuItem("experties")}
           >
+             
             <a href="#home">Trang chủ</a>
           </li>
           <li
@@ -77,16 +79,24 @@ const Header = () => {
           >
             <a href="#products">Sản phẩm</a>
           </li>
-       
         </ul>
 
         {/* for medium and small screens */}
-        <div
-          className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}
-        >
-          <BiMenuAltRight size={30} />
-        </div>
+        {menuOpened ? (
+          <div
+            className={css.menuIcon}
+            onClick={() => setMenuOpened((prev) => !prev)}
+          >
+            <AiOutlineClose size={30} />
+          </div>
+        ) : (
+          <div
+            className={css.menuIcon}
+            onClick={() => setMenuOpened((prev) => !prev)}
+          >
+            <BiMenu size={30} />
+          </div>
+        )}
       </div>
     </motion.div>
   );

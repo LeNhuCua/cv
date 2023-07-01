@@ -2,36 +2,46 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
+import { BiLogoFacebookCircle } from "react-icons/bi";
+import { AiFillGithub } from "react-icons/ai";
 const Hero = () => {
   return (
-    <section  id="home" className={`paddings ${css.wrapper}`}>
-        <a className="anchor" id="home"></a>
+    <section id="home" className={`paddings ${css.wrapper}`}>
+      <a className="anchor" id="home"></a>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth ${css.container}`}
-      
       >
         <div className={css.upperElements}>
           <motion.span
-            className="primaryText"
+            className="text-2xl"
             variants={fadeIn("right", "tween", 0.2, 1)}
           >
-            Hey There,
+            Xin chào nhà tuyển dụng, Tôi là
             <br />
-            I'm Binjan.
+            <span className="primaryText inline-block mt-4"> Lê Như Của</span>
           </motion.span>
-          <motion.span
-            className="secondaryText"
-            variants={fadeIn("left", "tween", 0.4, 1)}
-          >
-            I design beautiful simple
-            <br />
-            things, And I love what i do{" "}
-          </motion.span>
-        
+
+          <span className="secondaryText">Frontend Developer</span>
+
+          <div className={css.socialLinks}>
+            <a href="https://www.facebook.com/cua.le.7374480/" target="_blank">
+              <span className={` ${css.fb}`}>
+                {" "}
+                <BiLogoFacebookCircle className={`${css.fb} ${css.size}`} />
+              </span>
+            </a>
+
+            <a href="https://github.com/LeNhuCua/" target="_blank">
+              <span className={` ${css.git}`}>
+                {" "}
+                <AiFillGithub className={`${css.git} ${css.size}`} />
+              </span>
+            </a>
+          </div>
         </div>
 
         <motion.div
@@ -40,36 +50,10 @@ const Hero = () => {
         >
           <motion.img
             variants={slideIn("up", "tween", 0.5, 1.3)}
-            src="./person.png"
+            src="./anhnencv.jpg"
             alt=""
           />
         </motion.div>
-
-        <a className={css.email} href="mailto:zainkeepscode@gmail.com">
-          zainkeepscode@gmail.com
-        </a>
-
-        <div className={css.lowerElements}>
-          <motion.div
-            variants={fadeIn("right", "tween", 0.3, 1)}
-            className={css.experience}
-          >
-            <div className="primaryText">10</div>
-            <div className="secondaryText">
-              <div>Years</div>
-              <div>Experience</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={fadeIn("left", "tween", 0.5, 1)}
-            className={css.certificate}
-          >
-            <img src="./certificate.png" alt="" />
-            <span>CERTIFIED PROFATIONAL</span>
-            <span>UI/UX DESIGNER</span>
-          </motion.div>
-        </div>
       </motion.div>
     </section>
   );

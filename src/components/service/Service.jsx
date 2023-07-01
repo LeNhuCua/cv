@@ -1,5 +1,5 @@
 import React from "react";
-import { projectExperience, WhatDoIHelp } from "../../utils/data";
+
 import css from "./Service.module.scss";
 import { motion } from "framer-motion";
 import {
@@ -31,17 +31,17 @@ const Service = () => {
         </h1>
       </div>
 
-      <div class="row">
-        <div class={`${css.serviceContent}  ${css.fadeInDown}`}>
+      <div className="row">
+        <div className={`${css.serviceContent}  ${css.fadeInDown}`}>
           <motion.div
             variants={zoomIn(0.3, 1)}
-            class="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  items-center  gap-4"
+            className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  items-center  gap-4"
           >
             <div
-              class={css.box}
+              className={css.box}
           
             >
-              <div class="flex justify-center">
+              <div className="flex justify-center">
                 <img
                   className="w-60  h-60  object-cover"
                   src="./skills/mobile-app.png"
@@ -59,8 +59,8 @@ const Service = () => {
                 cả các màn hình thiết bị như desktop, smartphone,...
               </p>
             </div>
-            <div class={css.box}>
-              <div class="flex justify-center">
+            <div className={css.box}>
+              <div className="flex justify-center">
                 <img
                   className="w-60  h-60  object-cover"
                   src="./skills/www.png"
@@ -80,8 +80,8 @@ const Service = () => {
               </p>
             </div>
 
-            <div class={css.box}>
-              <div class="flex justify-center">
+            <div className={css.box}>
+              <div className="flex justify-center">
                 <img
                   className="w-60  h-60  object-cover"
                   src="./skills/customer-support.png"

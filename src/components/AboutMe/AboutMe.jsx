@@ -1,12 +1,12 @@
 import React from "react";
-import { projectExperience, WhatDoIHelp } from "../../utils/data";
-import css from "./Experties.module.scss";
+import { aboutLanguage } from "../../utils/data";
+import css from "./AboutMe.module.scss";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, textVariant } from "../../utils/motion.js";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 
-const Experties = () => {
+const AboutMe = () => {
   return (
     <section className={`${css.wrapper} section-title `}>
       <a className="anchor" id="about-me"></a>
@@ -26,7 +26,7 @@ const Experties = () => {
       >
         {/* left side */}
         <div className={css.leftSide}>
-          {projectExperience.map((exp, i) => {
+          {aboutLanguage.map((exp, i) => {
             return (
               <motion.div
                 variants={fadeIn("right", "tween", (i + 1) * 0.2, 1)}
@@ -35,7 +35,7 @@ const Experties = () => {
               >
                 <div className="flexCenter ">
                   {/* <exp.icon size={25} color="white" /> */}
-                  <img src={exp.img} alt="" srcset="" />
+                  <img src={exp.img} alt="" srcSet="" />
                 </div>
                 <div>
                   <span className="secondaryText">{exp.projects}</span>
@@ -60,43 +60,43 @@ const Experties = () => {
             lượng hơn, phát triển hơn. Tạo tiền đề có cơ hội thăng tiến trở
             thành nhân viên chính thức của công ty.
           </p>
-          <div class={css.info}>
-            <div class={css.list}>
+          <div className={css.info}>
+            <div className={css.list}>
               <label>Sinh nhật: </label>
               <p>08/05/2001</p>
             </div>
-            <div class={css.list}>
+            <div className={css.list}>
               <label>G-mail: </label>
-              <p>cua.ln.61cntt@gmail.com</p>
+              <a href="mailto:cua.ln.61cntt@gmail.com">cua.ln.61cntt@gmail.com</a>
             </div>
-            <div class={css.list}>
+            <div className={css.list}>
               <label>Tuổi: </label>
               <p>23</p>
             </div>
-            <div class={css.list}>
+            <div className={css.list}>
               <label>Số điện thoại: </label>
               <p>0776223708</p>
             </div>
-            <div class={css.list}>
+            <div className={css.list}>
               <label>Tốt nghiệp: </label>
               <p>Đại học Nha Trang (NTU) </p>
             </div>
 
-            <div class={css.list}>
+            <div className={css.list}>
               <label>Địa chỉ: </label>
               <p>Nha Trang - Khánh Hoà</p>
             </div>
           </div>
-          <div class={css.socialLinks}>
+          <div className={css.socialLinks}>
             <a href="https://www.facebook.com/cua.le.7374480/" target="_blank">
-              <span class={` ${css.fb}`}>
+              <span className={` ${css.fb}`}>
                 {" "}
                 <BiLogoFacebookCircle className={`${css.fb} ${css.size}`} />
               </span>
             </a>
 
             <a href="https://github.com/LeNhuCua/" target="_blank">
-              <span class={` ${css.git}`}>
+              <span className={` ${css.git}`}>
                 {" "}
                 <AiFillGithub className={`${css.git} ${css.size}`} />
               </span>
@@ -108,4 +108,4 @@ const Experties = () => {
   );
 };
 
-export default Experties;
+export default AboutMe;

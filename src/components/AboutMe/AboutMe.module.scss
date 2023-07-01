@@ -6,7 +6,7 @@
     background-size: cover;
 
     .container {
-        align-items: flex-start;
+        // align-items: flex-start;
         gap: 2rem;
         flex-wrap: wrap;
 
@@ -19,15 +19,17 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 2rem;
             place-items: center;
+            align-items: center;
+            // background-color: red;
             @media (max-width: $sm) {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
 
             .exp {
-     
-                align-items: center;
-                border: 1px solid $secondary-white;
+                
+              
+                
                 border-radius: 20px;
                 padding: 1.5rem;
                 gap: 2rem;
@@ -136,7 +138,7 @@
                         }
                         .git:hover {
                             background-color: #ff00;
-                            color: rgb(56, 51, 51);
+                            color: rgb(143, 84, 84);
                             transition: all .6s ease;
                         }
                         
