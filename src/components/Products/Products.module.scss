@@ -4,11 +4,6 @@
 
 
 
-.products {
-  background-color: rgb(232,236,244)
-
-
-}
 
 
  .sectionTitle h1::before {
@@ -105,7 +100,14 @@
   left: -9000px;
   transform: translateY(-50%);
   text-align: start;
-
+  h4 {
+    color: aliceblue; padding-bottom: 5px;
+    font-size: 1.4rem;
+  }
+  h5 {
+    color: aliceblue; padding-bottom: 5px;
+    font-size: 1.1rem;
+  }
 }
 
 @keyframes aniname-top {
@@ -144,19 +146,20 @@
   transition: all .3s linear;
   right: 20px;
   a {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2rem;
-    color: #070707;
+    color: #dc3538;
     height: 40px;
     width: 40px;
     background-color: #fff;
     cursor: pointer;
     margin-top: 10px;
     text-align: center;
-   
+    display: block;
     line-height: 40px;
   }
 }

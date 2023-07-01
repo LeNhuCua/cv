@@ -232,12 +232,13 @@ export const ProductList = [
   },
  
   {
-    name: "Self-Employed, Brisbane",
-    info: "Aug 2014 - Sep 2016",
-    link: "https://github.com/quocbinh-npm9081/BCchat",
-    demo: "https://github.com/quocbinh-npm9081/BCchat",
-    image:"./people2.png"
+    name: "NiceAdmin",
+    info: "Một dự án cắt giao diện bởi HTML, CSS,JS Responsive",
+    link: "https://github.com/LeNhuCua/NiceAdmin",
+    demo: "https://lenhucua.github.io/NiceAdmin/",
+    image:"./products/niceadmin.png"
   },
+  
  
  
 ];
