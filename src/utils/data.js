@@ -85,6 +85,13 @@ export const ProductList = [
     image:"./products/adminkimhuy.png"
   },
   {
+    name: "CV",
+    info: "Motion, ReactJs",
+    link: "https://github.com/LeNhuCua/cv",
+    demo: "http://cvlenhucua.freevnn.com",
+    image:"./products/cv.png"
+  },
+  {
     name: "Movie-App",
     info: "ReactJs, Fetch API từ https://api.themoviedb.org",
     link: "https://github.com/LeNhuCua/Movie-App",

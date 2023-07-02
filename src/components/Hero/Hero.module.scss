@@ -89,16 +89,18 @@
             (max-width: $md) {
                 position: relative;
                 left: 0;
-             
+                
                 background-size: 20rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 background-position: bottom;
+                top: 0rem;
             }
 
             position: absolute;
             // bottom: -2rem;
+            top: -10rem;
             margin: auto;
             background-image: url("./anhnencv");
             background-repeat: no-repeat;
